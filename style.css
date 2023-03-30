@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+} 
+body{
     background-color: lightblue;
 }
 .container {
@@ -17,3 +19,8 @@
     width: 100%;
 }
 
+/* ------- */
+
+.todoDone{
+    text-decoration: 2px solid line-through;
+}

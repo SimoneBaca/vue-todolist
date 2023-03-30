@@ -9,7 +9,7 @@
             integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"/>
             <link rel="stylesheet" href="style.css">
-        <title>Document</title>
+        <title>Vue-Todolist</title>
     </head>
     <body>
         <div id="app">
@@ -24,12 +24,13 @@
                 </div>
             </div>
             <div class="container">
-                <ul>
-                    <li class="row todo-box">
-                        <div> Todo text</div>
+                <ul v-if="todoList.length > 0">
+                    <li class="row todo-box" v-for="(todo,index) in todoList" @click="done(index)" >
+                        <div :class="{todoDone: todo.done}">{{todo.text}}</div>
                         <i class="fa-solid fa-trash"></i>
                     </li>
                 </ul>
+                <div v-else class="error">No element in the list</div>
             </div>
         </div>
     

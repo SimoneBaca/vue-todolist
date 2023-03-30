@@ -8,4 +8,50 @@ Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo vie
 MILESTONE 3
 Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.*/
 
+const { createApp } = Vue;
 
+createApp({
+  data() {
+    return {
+      newText: "",
+      todoInfo: {
+        done: false,
+        text: "",
+      },
+      todoList: [
+        {
+          done: false,
+          text: "Flour",
+        },
+        {
+          done: false,
+          text: "Bread",
+        },
+        {
+          done: false,
+          text: "Eggs",
+        },
+        {
+          done: false,
+          text: "Milk",
+        },
+        {
+          done: false,
+          text: "Sugar",
+        },
+      ],
+    };
+  },
+  methods: {
+    done(index) {
+      if (this.todoList[index].done === false) {
+        this.todoList[index].done = true;
+        console.log('fatto');
+      } else if (this.todoList[index].done === true) {
+        this.todoList[index].done === false; 
+        console.log('da fare');
+      }
+
+    },
+  },
+}).mount("#app");
