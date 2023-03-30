@@ -25,9 +25,9 @@
             </div>
             <div class="container">
                 <ul v-if="todoList.length > 0">
-                    <li class="row todo-box" v-for="(todo,index) in todoList" @click="done(index)" >
-                        <div :class="{todoDone: todo.done}">{{todo.text}}</div>
-                        <i class="fa-solid fa-trash"></i>
+                    <li class="row todo-box" v-for="(todo,index) in todoList">
+                        <div :class="{todoDone: todo.done}" @click="done(index)">{{todo.text}}</div>
+                        <i class="fa-solid fa-trash" @click="removeTodo(index)"></i>
                     </li>
                 </ul>
                 <div v-else class="error">No element in the list</div>
