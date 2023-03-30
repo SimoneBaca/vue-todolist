@@ -21,6 +21,38 @@ body{
 
 /* ------- */
 
+.title {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 6rem;
+    text-align: center;
+    color: purple;
+}
+.add-todo {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#todo {
+    width: 100%;
+    height: 3rem;
+    border: transparent;
+    border-radius: 1.5rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.5rem
+}
+.todo-box{
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1.5rem;
+    border-bottom: 1px solid whitesmoke;
+}
+
+
 .todoDone{
     text-decoration: 2px solid line-through;
 }
